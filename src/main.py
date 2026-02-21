@@ -10,9 +10,8 @@ def main():
     client = connect_ssh(HOST, USERNAME, PASSWORD)
 
     if client:
-        cpu_output = check_cpu(client)
-        print("CPU Raw Output: ")
-        print(cpu_output)
+        cpu_usage = check_cpu(client)
+        print(f"CPU Usage: {cpu_usage}%")
         client.close()
 
 if __name__ == "__main__":
